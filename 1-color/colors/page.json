@@ -35,10 +35,14 @@
     {
       "class": "shapeGroup",
       "id": "0CB86DB4-68FB-47B8-B278-AFE21712ED5E"
+    },
+    {
+      "class": "shapeGroup",
+      "id": "CA555179-E342-4C95-A9A0-7FB3E668E805"
     }
   ],
-  "name": "Page 1",
-  "nameIsFixed": false,
+  "name": "colors",
+  "nameIsFixed": true,
   "resizingConstraint": 63,
   "resizingType": 0,
   "rotation": 0,
