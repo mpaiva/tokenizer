@@ -41,7 +41,7 @@ let rec buildCssVarsAux = (acc: string) =>
   fun
   | [] => acc
   | [{name, hex}, ...list] =>
-    list |> buildCssVarsAux(acc ++ "  --" ++ name ++ ": #" ++ hex ++ "\n");
+    list |> buildCssVarsAux(acc ++ "  --" ++ name ++ ": #" ++ hex ++ ";\n");
 
 let buildCssVars = (vars: colors) => buildCssVarsAux("", vars);
 
