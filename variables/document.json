@@ -15,7 +15,7 @@
     ]
   },
   "colorSpace": 0,
-  "do_objectID": "92429820-1258-11e8-9550-79a113030cc6",
+  "do_objectID": "d8cde400-33b1-11e8-baad-29088ca5d734",
   "foreignSymbols": [
   ],
   "layerSymbols": {
@@ -29,14 +29,12 @@
     "version": 101
   },
   "pages": [
-    "colors"
+    "Page 1",
+    "Symbols"
   ],
   "userInfo": {
     "com.invisionlabs.sync": {
       "metadata": "{\"hasSynced\":0,\"hasProjectIdChanged\":0,\"projectId\":0,\"publicLink\":\"\",\"resolution\":2,\"syncAll\":1}"
-    },
-    "com.syncify.sketch.contentsync": {
-      "cs_sketch_file_setting_customize_sidebar": 1
     }
   }
 }

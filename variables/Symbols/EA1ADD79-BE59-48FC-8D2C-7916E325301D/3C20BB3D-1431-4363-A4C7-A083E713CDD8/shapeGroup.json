@@ -1,9 +1,10 @@
 {
   "_class": "shapeGroup",
   "clippingMaskMode": 0,
-  "do_objectID": "0CB86DB4-68FB-47B8-B278-AFE21712ED5E",
+  "do_objectID": "3C20BB3D-1431-4363-A4C7-A083E713CDD8",
   "exportOptions": {
     "_class": "exportOptions",
+    "do_objectID": "004A090A-07A9-409F-8A90-5B82D1F46292",
     "exportFormats": [
     ],
     "includedLayerIds": [
@@ -14,10 +15,11 @@
   "frame": {
     "_class": "rect",
     "constrainProportions": false,
-    "height": 26,
-    "width": 26,
-    "x": -333,
-    "y": -225
+    "do_objectID": "BBA5B5A9-4179-412B-8863-CB37963BC62A",
+    "height": 120,
+    "width": 120,
+    "x": 0,
+    "y": 0
   },
   "hasClickThrough": false,
   "hasClippingMask": false,
@@ -25,14 +27,14 @@
   "isFlippedVertical": false,
   "isLocked": false,
   "isVisible": true,
-  "layerListExpandedType": 1,
+  "layerListExpandedType": 0,
   "layers": [
     {
-      "class": "rectangle",
-      "id": "0DE129B7-7A3D-4D82-A1DA-A6577488F594"
+      "class": "shapePath",
+      "id": "25DD8C04-60D9-4391-BC7B-FEC5D8CD0281"
     }
   ],
-  "name": "$blue",
+  "name": "207-5-90",
   "nameIsFixed": true,
   "resizingConstraint": 63,
   "resizingType": 0,
@@ -40,22 +42,7 @@
   "shouldBreakMaskChain": false,
   "style": {
     "_class": "style",
-    "borders": [
-      {
-        "_class": "border",
-        "color": {
-          "_class": "color",
-          "alpha": 1,
-          "blue": 0.592,
-          "green": 0.592,
-          "red": 0.592
-        },
-        "fillType": 0,
-        "isEnabled": false,
-        "position": 1,
-        "thickness": 1
-      }
-    ],
+    "do_objectID": "CA36B585-6C5D-432E-A58E-8541FAF20609",
     "endDecorationType": 0,
     "fills": [
       {
@@ -63,9 +50,9 @@
         "color": {
           "_class": "color",
           "alpha": 1,
-          "blue": 0.886238694190979,
-          "green": 0.5645518898963928,
-          "red": 0.288655698299408
+          "blue": 0.9372549019607843,
+          "green": 0.9254901960784314,
+          "red": 0.9137254901960784
         },
         "fillType": 0,
         "isEnabled": true,
@@ -76,7 +63,7 @@
       }
     ],
     "miterLimit": 10,
-    "sharedObjectID": "F81894E8-9661-4EC7-B588-E2C8051BD810",
+    "sharedObjectID": "4BBACD21-8990-4FFC-979C-04AE5BBF6AA9",
     "startDecorationType": 0
   },
   "userInfo": {
