@@ -1,0 +1,84 @@
+{
+  "_class": "symbolMaster",
+  "backgroundColor": {
+    "_class": "color",
+    "alpha": 1,
+    "blue": 1,
+    "do_objectID": "9A9E3AFC-A059-4805-9029-96E03E50888B",
+    "green": 1,
+    "red": 1
+  },
+  "changeIdentifier": 698,
+  "do_objectID": "8A50658B-CCA8-4605-830E-40C41D15C425",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "72381E39-6AB4-411A-B80F-62709DFF5920",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "BF2E98B8-45E8-4ACA-8BFD-2196E07F2C99",
+    "height": 200,
+    "width": 200,
+    "x": -340,
+    "y": 2241
+  },
+  "hasBackgroundColor": false,
+  "hasClickThrough": false,
+  "horizontalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "do_objectID": "A8E79FBD-635E-4D83-86FC-38B636C983E1",
+    "guides": [
+    ]
+  },
+  "includeBackgroundColorInExport": true,
+  "includeBackgroundColorInInstance": false,
+  "includeInCloudUpload": true,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isFlowHome": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 1,
+  "layers": [
+    {
+      "class": "shapeGroup",
+      "id": "9027DC02-7935-4C9F-ABC7-ABF0DDB81D72"
+    }
+  ],
+  "name": "colors/functional/accent",
+  "nameIsFixed": true,
+  "resizesContent": false,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": true,
+  "style": {
+    "_class": "style",
+    "do_objectID": "18C73AD4-D03B-4C11-811F-06011D65E01C",
+    "endDecorationType": 0,
+    "miterLimit": 10,
+    "startDecorationType": 0
+  },
+  "symbolID": "AD9EB9C9-4733-41B6-BDE9-DEFC63A0DC29",
+  "userInfo": {
+    "com.animaapp.stc-sketch-plugin": {
+      "kModelPropertiesKey": {
+      }
+    }
+  },
+  "verticalRulerData": {
+    "_class": "rulerData",
+    "base": 0,
+    "do_objectID": "89B0EDAD-2318-430F-B19D-1B818FBEA8E7",
+    "guides": [
+    ]
+  }
+}
