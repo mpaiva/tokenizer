@@ -32,7 +32,7 @@
     {
       "_class": "overrideValue",
       "overrideName": "7E8ABCC9-4575-4CAA-83F6-E2EB021711EB_stringValue",
-      "value": "$accent"
+      "value": "accent"
     },
     {
       "_class": "overrideValue",
@@ -62,7 +62,7 @@
     "4D6622EE-C763-48A6-B88F-74A00FD5D488": {
       "symbolID": "AD9EB9C9-4733-41B6-BDE9-DEFC63A0DC29"
     },
-    "7E8ABCC9-4575-4CAA-83F6-E2EB021711EB": "$accent",
+    "7E8ABCC9-4575-4CAA-83F6-E2EB021711EB": "accent",
     "81E57553-D75A-4B9E-B041-46E6D01F3901": "FFF200"
   },
   "resizingConstraint": 63,

@@ -32,7 +32,7 @@
     {
       "_class": "overrideValue",
       "overrideName": "7E8ABCC9-4575-4CAA-83F6-E2EB021711EB_stringValue",
-      "value": "$secondary"
+      "value": "secondary"
     },
     {
       "_class": "overrideValue",
@@ -62,7 +62,7 @@
     "4D6622EE-C763-48A6-B88F-74A00FD5D488": {
       "symbolID": "AA75C953-B4FC-4C6A-A8A6-1A5D1C71A32A"
     },
-    "7E8ABCC9-4575-4CAA-83F6-E2EB021711EB": "$secondary",
+    "7E8ABCC9-4575-4CAA-83F6-E2EB021711EB": "secondary",
     "81E57553-D75A-4B9E-B041-46E6D01F3901": "FC417F"
   },
   "resizingConstraint": 63,
