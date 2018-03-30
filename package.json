@@ -4,7 +4,8 @@
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "clean": "bsb -clean-world",
+    "exe": "node ./src/CLI.bs.js"
   },
   "keywords": [
     "BuckleScript"
@@ -12,6 +13,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^2.1.0"
+    "bs-platform": "^2.2.3"
+  },
+  "dependencies": {
+    "@glennsl/bs-json": "^1.2.0"
   }
 }
