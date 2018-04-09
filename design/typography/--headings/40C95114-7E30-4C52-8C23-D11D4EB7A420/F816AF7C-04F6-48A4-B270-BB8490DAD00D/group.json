@@ -1,0 +1,62 @@
+{
+  "_class": "group",
+  "do_objectID": "F816AF7C-04F6-48A4-B270-BB8490DAD00D",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "24F5339C-0FE5-4F9D-A053-EA170D748683",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "BB21EA5F-C1AB-4614-8E0F-45FC43C7B0C3",
+    "height": 45,
+    "width": 265,
+    "x": 120,
+    "y": 239
+  },
+  "hasClickThrough": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "layers": [
+    {
+      "class": "text",
+      "id": "19D02650-A085-4CB3-9C69-2B36DCBA8B35"
+    },
+    {
+      "class": "shapeGroup",
+      "id": "34EAF6C2-4069-44CE-8717-50AAD47B8728"
+    },
+    {
+      "class": "text",
+      "id": "9F1CB780-70E0-4D33-B72D-8C6A737B86BB"
+    }
+  ],
+  "name": "H500",
+  "nameIsFixed": true,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "51BAFF23-F3F3-48BC-B3BA-25877A5DA966",
+    "endDecorationType": 0,
+    "miterLimit": 10,
+    "startDecorationType": 0
+  },
+  "userInfo": {
+    "com.animaapp.stc-sketch-plugin": {
+      "kModelPropertiesKey": {
+      }
+    }
+  }
+}

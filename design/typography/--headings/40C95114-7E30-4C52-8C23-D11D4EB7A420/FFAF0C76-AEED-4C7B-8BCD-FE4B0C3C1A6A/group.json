@@ -1,0 +1,66 @@
+{
+  "_class": "group",
+  "do_objectID": "FFAF0C76-AEED-4C7B-8BCD-FE4B0C3C1A6A",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "6D9F7E3C-1B74-40B2-A454-A163740BA266",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "76505010-9C82-4F7E-9129-E87275401643",
+    "height": 73,
+    "width": 656,
+    "x": 120,
+    "y": 56
+  },
+  "hasClickThrough": false,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "layers": [
+    {
+      "class": "text",
+      "id": "D5099828-C1A9-487B-B7BE-D9F36E47C9FF"
+    },
+    {
+      "class": "text",
+      "id": "4446AD40-2CAF-4729-A1CC-AC035DEC3EE9"
+    },
+    {
+      "class": "shapeGroup",
+      "id": "30B19F01-870C-4DDE-A7CC-62B89C3DC2A6"
+    },
+    {
+      "class": "text",
+      "id": "9A2DFB07-1045-437E-BC5E-ABBAB6FF30A3"
+    }
+  ],
+  "name": "H800",
+  "nameIsFixed": true,
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "3EA15AA8-0BA8-4260-A91C-F0CDB513D768",
+    "endDecorationType": 0,
+    "miterLimit": 10,
+    "startDecorationType": 0
+  },
+  "userInfo": {
+    "com.animaapp.stc-sketch-plugin": {
+      "kModelPropertiesKey": {
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "_class": "symbolInstance",
+  "do_objectID": "9D2C43B7-632A-4C07-9C70-B3F5A0F2AB4C",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "40E6273F-E73C-4384-A9BC-77DB8B1C66AB",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "52198AFC-86DC-4DE4-8F70-5244249E1163",
+    "height": 16,
+    "width": 16,
+    "x": 48,
+    "y": 11
+  },
+  "horizontalSpacing": 0,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "name": "os ui/cursor/pointer",
+  "nameIsFixed": false,
+  "overrideValues": [
+  ],
+  "overrides": {
+  },
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "scale": 1,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "5B86E601-A366-4146-B788-66A8EB1A6219",
+    "endDecorationType": 0,
+    "miterLimit": 10,
+    "startDecorationType": 0
+  },
+  "symbolID": "681C3F31-53BB-4B72-B599-AC37882BC483",
+  "userInfo": {
+    "com.animaapp.stc-sketch-plugin": {
+      "kModelPropertiesKey": {
+      }
+    }
+  },
+  "verticalSpacing": 0
+}
