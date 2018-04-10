@@ -1,0 +1,1 @@
+ReactDOMRe.renderToElementWithId(<Colors name="Me" />, "app");
