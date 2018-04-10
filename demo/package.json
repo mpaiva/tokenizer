@@ -2,5 +2,11 @@
   "name": "demo",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "reason-react": "^0.3.4"
+  },
+  "devDependencies": {
+    "bs-platform": "^2.2.3"
+  }
 }
