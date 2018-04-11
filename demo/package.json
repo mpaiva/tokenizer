@@ -1,28 +1,21 @@
 {
   "name": "demo",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "yarn watch & parcel public/index.html",
-    "build": "parcel build public/index.html",
-    "watch": "bsb -make-world -w"
-  },
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "assemble": "~0.3.11",
-    "grunt": "~0.4.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "reason-react": "^0.3.4",
-    "styles": "^0.2.1"
+    "reason-scripts": "0.8.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "autoprefixer": "^8.2.0",
+    "bs-jest": "^0.3.2",
     "bs-platform": "^2.2.3",
-    "bsb-js": "^1.0.2",
-    "cssnano": "^3.10.0",
-    "parcel-bundler": "^1.7.0",
-    "postcss-import": "^11.1.0",
-    "tailwindcss": "^0.5.2"
+    "reason-react": "^0.3.4"
   }
 }
