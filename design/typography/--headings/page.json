@@ -35,6 +35,14 @@
     {
       "class": "artboard",
       "id": "40C95114-7E30-4C52-8C23-D11D4EB7A420"
+    },
+    {
+      "class": "text",
+      "id": "959F2CBF-8536-41B6-AAC8-010B0289B4AB"
+    },
+    {
+      "class": "text",
+      "id": "A38FCC1F-EE6B-4A3A-B83C-706892C50528"
     }
   ],
   "name": "--headings",
