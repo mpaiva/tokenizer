@@ -1,0 +1,63 @@
+{
+  "_class": "symbolInstance",
+  "do_objectID": "6DF0B95E-EFDC-432D-848A-77AAC0370E16",
+  "exportOptions": {
+    "_class": "exportOptions",
+    "do_objectID": "8EA47F8A-AC67-474E-8799-F0F42F9C4925",
+    "exportFormats": [
+    ],
+    "includedLayerIds": [
+    ],
+    "layerOptions": 0,
+    "shouldTrim": false
+  },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "do_objectID": "9C22E56B-5197-4B55-9050-A1C4DEC922F0",
+    "height": 40,
+    "width": 600,
+    "x": 718,
+    "y": 747
+  },
+  "horizontalSpacing": 0,
+  "isFlippedHorizontal": false,
+  "isFlippedVertical": false,
+  "isLocked": false,
+  "isVisible": true,
+  "layerListExpandedType": 0,
+  "name": "token",
+  "nameIsFixed": false,
+  "overrideValues": [
+    {
+      "_class": "overrideValue",
+      "do_objectID": "E99784EB-1AA0-40C6-8DF9-5B744CC156CE",
+      "overrideName": "A165BE60-DAC3-472C-8937-1165308984CF_stringValue",
+      "value": "repository"
+    },
+    {
+      "_class": "overrideValue",
+      "do_objectID": "324CD624-8C22-4D37-8ED3-C2B0F91E8EC9",
+      "overrideName": "6EF24102-A752-4326-96F6-3462C9A315D2_stringValue",
+      "value": "https://github.com/meetup/swarm-sasstools/"
+    }
+  ],
+  "overrides": {
+    "6EF24102-A752-4326-96F6-3462C9A315D2": "https://github.com/meetup/swarm-sasstools/",
+    "A165BE60-DAC3-472C-8937-1165308984CF": "repository"
+  },
+  "resizingConstraint": 63,
+  "resizingType": 0,
+  "rotation": 0,
+  "scale": 1,
+  "shouldBreakMaskChain": false,
+  "style": {
+    "_class": "style",
+    "do_objectID": "DF2096FA-C790-4977-86EA-1CD2B283495F",
+    "endDecorationType": 0,
+    "miterLimit": 10,
+    "startDecorationType": 0
+  },
+  "symbolID": "2F5631FB-EA67-44F1-8839-4A48716EA9EC",
+  "verticalSpacing": 0
+}
