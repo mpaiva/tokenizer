@@ -22,7 +22,7 @@ In your terminal run
 * `cd sketch-ssot`
 * `yarn install`
 * `yarn build`
-* `yarn exe`
+* `yarn exe` - Creates output files
 
 That last command runs the [reasonml](https://reasonml.github.io/) code and generates a css variables file from the sketch data.
 
@@ -30,4 +30,23 @@ Now open the project with kactus and generate/open a sketch file from `variables
 
 # So far
 
-At this point we only have color variables working. We would like to be able to export to multiple variable styles beyond css4 such as scss to accomodate variations in technical decisions. Typography variables and autogenerating simple react components are next on the roadmap.
+At this point we only have color variables working. We would like to be able to export to multiple variable styles beyond CSS4 such as SASS to accommodate variations in technical decisions. Typography variables and autogenerating simple react components are next on the roadmap.
+
+# Roadmap
+
+  - Create a proof-of-concept leveraging an existing design system;
+  - Clone design system repository;
+  - Produce Sketch source file(s)
+  - Apply yarn scripts to create output files (SASS), then compile CSS files accordingly
+  - Test by reviewing changes on HTML after push.
+
+
+## Swarm Design System (by meetup.com)
+
+Recommend using the [Swarm Design System](https://meetup.github.io/swarm-design-system/design/color), which contains React, SASS, Storybook, i18n, a11y, and more.
+
+### Design Documentation
+- https://meetup.github.io/swarm-design-system/design/color
+
+### Github Repository
+- https://github.com/meetup/swarm-design-system
