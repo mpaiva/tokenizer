@@ -37,6 +37,10 @@
       "id": "84714AE9-BE16-46B4-8CB9-3FC4CDF38936"
     },
     {
+      "class": "shapeGroup",
+      "id": "7579472F-C4A3-4714-A73F-DD88AF814A3C"
+    },
+    {
       "class": "symbolInstance",
       "id": "10FF803E-E0DB-4424-870C-D2CC8F7430D7"
     },
@@ -71,6 +75,10 @@
     {
       "class": "symbolInstance",
       "id": "752C15E1-B76B-4F7B-A113-867E46F2FD30"
+    },
+    {
+      "class": "group",
+      "id": "850924F4-679B-46E9-BA75-4C0411651922"
     }
   ],
   "name": "--colors",

@@ -1,7 +1,7 @@
 {
   "_class": "rectangle",
   "booleanOperation": -1,
-  "do_objectID": "589C16A7-7223-41F5-A6A7-058CAACA14F0",
+  "do_objectID": "94FB5A7E-A503-4D94-8DE4-234AE31C3409",
   "edited": false,
   "exportOptions": {
     "_class": "exportOptions",
@@ -16,7 +16,7 @@
   "frame": {
     "_class": "rect",
     "constrainProportions": false,
-    "height": 26,
+    "height": 100,
     "width": 180,
     "x": 0,
     "y": 0
@@ -123,11 +123,5 @@
   "resizingConstraint": 63,
   "resizingType": 0,
   "rotation": 0,
-  "shouldBreakMaskChain": false,
-  "userInfo": {
-    "com.animaapp.stc-sketch-plugin": {
-      "kModelPropertiesKey": {
-      }
-    }
-  }
+  "shouldBreakMaskChain": false
 }
