@@ -68,12 +68,14 @@ function buildColors(colorsDir) {
         }), List.map(Json.parseOrRaise, List.map((function (file) {
                   return Fs.readFileSync(colorsDir + ("/" + file), "utf8");
                 }), List.filter((function (file) {
-                        return +(file !== "page.json");
+                        if (file !== "page.json") {
+                          return +file.includes(".json");
+                        } else {
+                          return /* false */0;
+                        }
                       }))($$Array.to_list(Fs.readdirSync(colorsDir))))));
   return /* Colors */Block.__(0, [clrs]);
 }
-
-console.log(+"thing".includes(".json"));
 
 function buildTypography(typographyDir) {
   console.log("Building Typography Variables");
@@ -102,20 +104,31 @@ function buildTypography(typographyDir) {
   return /* Typography */Block.__(1, [typos]);
 }
 
-var colorVars = buildColors("design/variables/--colors");
+function buildVars() {
+  var colorVars = buildColors("design/variables/--colors");
+  var typoVars = buildTypography("design/swarm_design_tokens/typography");
+  return ":root {\n" + (buildCssVars(colorVars) + (buildCssVars(typoVars) + "}"));
+}
 
-var typoVars = buildTypography("design/swarm_design_tokens/typography");
+function run() {
+  var variables = buildVars(/* () */0);
+  Fs.writeFileSync("demo/src/style/variables.css", variables, "utf8");
+  return /* () */0;
+}
 
-var output = ":root {\n" + (buildCssVars(colorVars) + (buildCssVars(typoVars) + "}"));
+run(/* () */0);
 
-Fs.writeFileSync("demo/src/style/variables.css", output, "utf8");
+((
+    Fs.watch("design", { encoding: 'buffer' }, function() {
+      run();
+    })
+  ));
 
 exports.buildColorCssVars = buildColorCssVars;
 exports.buildTypoCssVars = buildTypoCssVars;
 exports.buildCssVars = buildCssVars;
 exports.buildColors = buildColors;
 exports.buildTypography = buildTypography;
-exports.colorVars = colorVars;
-exports.typoVars = typoVars;
-exports.output = output;
+exports.buildVars = buildVars;
+exports.run = run;
 /*  Not a pure module */

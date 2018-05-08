@@ -36,7 +36,9 @@ let buildColors = colorsDir => {
     colorsDir
     |> Node.Fs.readdirSync
     |> Array.to_list
-    |> List.filter(file => file !== "page.json")
+    |> List.filter(file =>
+         file !== "page.json" && Js.String.includes(".json", file)
+       )
     |> List.map(file => Node.Fs.readFileAsUtf8Sync(colorsDir ++ "/" ++ file))
     |> List.map(Json.parseOrRaise)
     |> List.map(json =>
@@ -63,8 +65,6 @@ let buildColors = colorsDir => {
        );
   Colors(clrs);
 };
-
-Js.log(Js.String.includes(".json", "thing"));
 
 let buildTypography = typographyDir => {
   Js.log("Building Typography Variables");
@@ -112,14 +112,24 @@ let buildTypography = typographyDir => {
   Typography(typos);
 };
 
-let colorVars = buildColors("design/variables/--colors");
-
-let typoVars = buildTypography("design/swarm_design_tokens/typography");
-
-let output =
+let buildVars = () => {
+  let colorVars = buildColors("design/variables/--colors");
+  let typoVars = buildTypography("design/swarm_design_tokens/typography");
   ":root {\n" ++ buildCssVars(colorVars) ++ buildCssVars(typoVars) ++ "}";
+};
 
-Node.Fs.writeFileAsUtf8Sync("demo/src/style/variables.css", output);
-/* let watcher = Node.Fs.Watch.watch(colorsDir); */
-/* Node.Fs.Watch.on(handler, watcher()); */
-/* watcher(); */
+let run = () => {
+  let variables = buildVars();
+  Node.Fs.writeFileAsUtf8Sync("demo/src/style/variables.css", variables);
+  ();
+};
+
+run();
+
+[%bs.raw
+  {|
+    Fs.watch("design", { encoding: 'buffer' }, function() {
+      run();
+    })
+  |}
+];

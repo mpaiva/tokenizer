@@ -15,7 +15,7 @@
 }
 
 .text-xl {
-  font-size: var(--var-size-big);
+  font-size: var(--font-size-big);
 }
 
 .text-2xl {

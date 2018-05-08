@@ -1,12 +1,12 @@
 :root {
-  --default: #f43ba3;
-  --secondary: #FC417F;
-  --accent: #FF23E3;
-  --danger: #FF6600;
+  --default: #304FFE;
+  --secondary: #E0346D;
+  --accent: #C1B926;
+  --danger: #DC3645;
   --success: #10CC97;
-  --primary: #000000;
+  --primary: #554596;
   --disabled: #DEE2E6;
-  --info: #ff34eb;
+  --info: #18A2B8;
   --accent2: #ff7543;
   --warning: #FFC108;
   --font-size-title: 32px;

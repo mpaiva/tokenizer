@@ -44,3 +44,13 @@
   text-align: center;
   margin: 0;
 }
+
+.typoItems {
+  width: 55%;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.typoHeading {
+  margin-top: 100px;
+}
