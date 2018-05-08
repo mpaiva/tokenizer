@@ -1,50 +1,125 @@
 type color = {
   name: string,
-  hex: string
+  hex: string,
 };
 
-type colors = list(color);
+type typo = {
+  name: string,
+  value: string,
+};
 
-let colorsDir = "design/variables/--colors";
+type variableSet =
+  | Colors(list(color))
+  | Typography(list(typo));
 
-let clrs =
-  colorsDir
-  |> Node.Fs.readdirSync
-  |> Array.to_list
-  |> List.filter(file => file !== "page.json")
-  |> List.map(file => Node.Fs.readFileAsUtf8Sync(colorsDir ++ "/" ++ file))
-  |> List.map(Json.parseOrRaise)
-  |> List.map(json =>
-       Json.Decode.{
-         name:
-           0
-           |> Array.get(
-                json
-                |> field(
-                     "overrideValues",
-                     Json.Decode.array(field("value", string))
-                   )
-              ),
-         hex:
-           1
-           |> Array.get(
-                json
-                |> field(
-                     "overrideValues",
-                     Json.Decode.array(field("value", string))
-                   )
-              )
-       }
-     );
-
-let rec buildCssVarsAux = (acc: string) =>
+let rec buildColorCssVars = (acc: string) =>
   fun
   | [] => acc
   | [{name, hex}, ...list] =>
-    list |> buildCssVarsAux(acc ++ "  --" ++ name ++ ": #" ++ hex ++ ";\n");
+    list |> buildColorCssVars(acc ++ "  --" ++ name ++ ": #" ++ hex ++ ";\n");
 
-let buildCssVars = (vars: colors) => buildCssVarsAux("", vars);
+let rec buildTypoCssVars = (acc: string) =>
+  fun
+  | [] => acc
+  | [{name, value}, ...list] =>
+    list |> buildTypoCssVars(acc ++ "  --" ++ name ++ ": " ++ value ++ ";\n");
 
-let output = ":root {\n" ++ buildCssVars(clrs) ++ "}";
+let buildCssVars =
+  fun
+  | Colors(clrs) => buildColorCssVars("", clrs)
+  | Typography(typs) => buildTypoCssVars("", typs);
 
-Node.Fs.writeFileAsUtf8Sync("output/css-next.css", output);
+let buildColors = colorsDir => {
+  Js.log("Building Color Variables!");
+  Js.log("Reading data from " ++ colorsDir);
+  let clrs =
+    colorsDir
+    |> Node.Fs.readdirSync
+    |> Array.to_list
+    |> List.filter(file => file !== "page.json")
+    |> List.map(file => Node.Fs.readFileAsUtf8Sync(colorsDir ++ "/" ++ file))
+    |> List.map(Json.parseOrRaise)
+    |> List.map(json =>
+         Json.Decode.{
+           name:
+             0
+             |> Array.get(
+                  json
+                  |> field(
+                       "overrideValues",
+                       Json.Decode.array(field("value", string)),
+                     ),
+                ),
+           hex:
+             1
+             |> Array.get(
+                  json
+                  |> field(
+                       "overrideValues",
+                       Json.Decode.array(field("value", string)),
+                     ),
+                ),
+         }
+       );
+  Colors(clrs);
+};
+
+Js.log(Js.String.includes(".json", "thing"));
+
+let buildTypography = typographyDir => {
+  Js.log("Building Typography Variables");
+  Js.log("Reading data from " ++ typographyDir);
+  let typos =
+    typographyDir
+    |> Node.Fs.readdirSync
+    |> Array.to_list
+    |> List.filter(file => file !== "page.json")
+    |> List.hd
+    |> (
+      dir =>
+        Node.Fs.readdirSync(typographyDir ++ "/" ++ dir)
+        |> Array.to_list
+        |> List.filter(file => file !== "artboard.json")
+        |> List.map(file =>
+             Node.Fs.readFileAsUtf8Sync(
+               typographyDir ++ "/" ++ dir ++ "/" ++ file,
+             )
+           )
+        |> List.map(Json.parseOrRaise)
+        |> List.map(json =>
+             Json.Decode.{
+               name:
+                 0
+                 |> Array.get(
+                      json
+                      |> field(
+                           "overrideValues",
+                           Json.Decode.array(field("value", string)),
+                         ),
+                    ),
+               value:
+                 1
+                 |> Array.get(
+                      json
+                      |> field(
+                           "overrideValues",
+                           Json.Decode.array(field("value", string)),
+                         ),
+                    ),
+             }
+           )
+    );
+  Typography(typos);
+};
+
+let colorVars = buildColors("design/variables/--colors");
+
+let typoVars = buildTypography("design/swarm_design_tokens/typography");
+
+let output =
+  ":root {\n" ++ buildCssVars(colorVars) ++ buildCssVars(typoVars) ++ "}";
+
+Node.Fs.writeFileAsUtf8Sync("demo/src/style/variables.css", output);
+/* let watcher = Node.Fs.Watch.watch(colorsDir); */
+/* Node.Fs.Watch.on(handler, watcher()); */
+/* watcher(); */

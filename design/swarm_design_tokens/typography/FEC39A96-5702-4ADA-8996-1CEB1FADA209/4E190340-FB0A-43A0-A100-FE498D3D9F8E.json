@@ -15,10 +15,10 @@
     "_class": "rect",
     "constrainProportions": false,
     "do_objectID": "3A0C248B-9787-4845-805B-0E307915F679",
-    "height": 40,
-    "width": 110,
-    "x": 620,
-    "y": 422
+    "height": 90,
+    "width": 149,
+    "x": 331,
+    "y": 434
   },
   "horizontalSpacing": 0,
   "isFlippedHorizontal": false,
@@ -26,14 +26,14 @@
   "isLocked": false,
   "isVisible": true,
   "layerListExpandedType": 0,
-  "name": "token",
-  "nameIsFixed": false,
+  "name": "font-size-small",
+  "nameIsFixed": true,
   "overrideValues": [
     {
       "_class": "overrideValue",
       "do_objectID": "66FC097B-A096-49EF-95AB-C3B13656FDDC",
       "overrideName": "B51F23A3-CE07-4325-8F03-74A6B200AF06_stringValue",
-      "value": "$font-size-small"
+      "value": "font-size-small"
     },
     {
       "_class": "overrideValue",
@@ -44,7 +44,7 @@
   ],
   "overrides": {
     "2D9C7A5E-9CD3-410B-8469-0B5689E6D088": "14px",
-    "B51F23A3-CE07-4325-8F03-74A6B200AF06": "$font-size-small"
+    "B51F23A3-CE07-4325-8F03-74A6B200AF06": "font-size-small"
   },
   "resizingConstraint": 63,
   "resizingType": 0,

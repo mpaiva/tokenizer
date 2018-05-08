@@ -15,10 +15,10 @@
     "_class": "rect",
     "constrainProportions": false,
     "do_objectID": "04E057C6-F16C-4BE3-BFEB-98D0D7046B74",
-    "height": 40,
-    "width": 100,
-    "x": 828,
-    "y": 422
+    "height": 90,
+    "width": 136,
+    "x": 613,
+    "y": 434
   },
   "horizontalSpacing": 0,
   "isFlippedHorizontal": false,
@@ -26,14 +26,14 @@
   "isLocked": false,
   "isVisible": true,
   "layerListExpandedType": 0,
-  "name": "token",
-  "nameIsFixed": false,
+  "name": "font-size-big",
+  "nameIsFixed": true,
   "overrideValues": [
     {
       "_class": "overrideValue",
       "do_objectID": "40049FBF-7C17-4725-A90F-195183C436EB",
       "overrideName": "B51F23A3-CE07-4325-8F03-74A6B200AF06_stringValue",
-      "value": "$font-size-big"
+      "value": "font-size-big"
     },
     {
       "_class": "overrideValue",
@@ -44,7 +44,7 @@
   ],
   "overrides": {
     "2D9C7A5E-9CD3-410B-8469-0B5689E6D088": "24px",
-    "B51F23A3-CE07-4325-8F03-74A6B200AF06": "$font-size-big"
+    "B51F23A3-CE07-4325-8F03-74A6B200AF06": "font-size-big"
   },
   "resizingConstraint": 63,
   "resizingType": 0,

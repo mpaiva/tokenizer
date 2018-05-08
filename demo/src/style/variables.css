@@ -1,0 +1,28 @@
+:root {
+  --default: #f43ba3;
+  --secondary: #FC417F;
+  --accent: #FF23E3;
+  --danger: #FF6600;
+  --success: #10CC97;
+  --primary: #000000;
+  --disabled: #DEE2E6;
+  --info: #ff34eb;
+  --accent2: #ff7543;
+  --warning: #FFC108;
+  --font-size-title: 32px;
+  --line-height-largeText: 1.1;
+  --font-size-small: 14px;
+  --font: "Graphik Meetup", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  --font-size-display1: 42px;
+  --W_medium: 500;
+  --W_normal: 400;
+  --line-height-runningText: 1.8;
+  --font-size-big: 24px;
+  --font-size: 16px;
+  --font-size-tiny: 12px;
+  --line-height : 1.45;
+  --font--mono: Monaco, "Andale Mono", "Courier New", monospace;
+  --font-size-big2: 20px;
+  --W_bold: 600;
+  --line-height-smallText: 1.6;
+}

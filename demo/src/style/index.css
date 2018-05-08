@@ -1,3 +1,6 @@
+@import './variables.css';
+@import './colors/background.css';
+
 body {
   margin: 0;
   padding: 0;

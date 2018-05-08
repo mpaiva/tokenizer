@@ -13,10 +13,10 @@
   "frame": {
     "_class": "rect",
     "constrainProportions": false,
-    "height": 40,
-    "width": 887,
-    "x": 500,
-    "y": 302
+    "height": 90,
+    "width": 1202,
+    "x": 168,
+    "y": 165
   },
   "horizontalSpacing": 0,
   "isFlippedHorizontal": false,
@@ -24,14 +24,14 @@
   "isLocked": false,
   "isVisible": true,
   "layerListExpandedType": 0,
-  "name": "token",
-  "nameIsFixed": false,
+  "name": "font",
+  "nameIsFixed": true,
   "overrideValues": [
     {
       "_class": "overrideValue",
       "do_objectID": "13842B0D-3AED-49DC-9D35-6037073B188B",
       "overrideName": "B51F23A3-CE07-4325-8F03-74A6B200AF06_stringValue",
-      "value": "$font"
+      "value": "font"
     },
     {
       "_class": "overrideValue",
@@ -42,7 +42,7 @@
   ],
   "overrides": {
     "2D9C7A5E-9CD3-410B-8469-0B5689E6D088": "\"Graphik Meetup\", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif",
-    "B51F23A3-CE07-4325-8F03-74A6B200AF06": "$font"
+    "B51F23A3-CE07-4325-8F03-74A6B200AF06": "font"
   },
   "resizingConstraint": 63,
   "resizingType": 0,

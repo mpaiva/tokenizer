@@ -15,10 +15,10 @@
     "_class": "rect",
     "constrainProportions": false,
     "do_objectID": "586D5603-443D-4979-8F64-7ED9F13A79B0",
-    "height": 40,
-    "width": 230,
-    "x": 500,
-    "y": 542
+    "height": 90,
+    "width": 311,
+    "x": 168,
+    "y": 703
   },
   "horizontalSpacing": 0,
   "isFlippedHorizontal": false,
@@ -26,14 +26,14 @@
   "isLocked": false,
   "isVisible": true,
   "layerListExpandedType": 0,
-  "name": "token",
-  "nameIsFixed": false,
+  "name": "line-height",
+  "nameIsFixed": true,
   "overrideValues": [
     {
       "_class": "overrideValue",
       "do_objectID": "9B7CB96F-BC8A-4F6E-9CD9-C2B65632506B",
       "overrideName": "B51F23A3-CE07-4325-8F03-74A6B200AF06_stringValue",
-      "value": "$line-height "
+      "value": "line-height "
     },
     {
       "_class": "overrideValue",
@@ -44,7 +44,7 @@
   ],
   "overrides": {
     "2D9C7A5E-9CD3-410B-8469-0B5689E6D088": "1.45",
-    "B51F23A3-CE07-4325-8F03-74A6B200AF06": "$line-height "
+    "B51F23A3-CE07-4325-8F03-74A6B200AF06": "line-height "
   },
   "resizingConstraint": 63,
   "resizingType": 0,

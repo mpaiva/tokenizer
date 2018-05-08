@@ -1,0 +1,39 @@
+.bg-primary {
+  background: var(--primary);
+}
+
+.bg-secondary {
+  background: var(--secondary);
+}
+
+.bg-accent {
+  background: var(--accent);
+}
+
+.bg-accent2 {
+  background: var(--accent2);
+}
+
+.bg-default {
+  background: var(--default);
+}
+
+.bg-info {
+  background: var(--info);
+}
+
+.bg-danger {
+  background: var(--danger);
+}
+
+.bg-warning {
+  background: var(--warning);
+}
+
+.bg-success {
+  background: var(--success);
+}
+
+.bg-disabled {
+  background: var(--disabled);
+}

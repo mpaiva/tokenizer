@@ -5,31 +5,11 @@ var Fs = require("fs");
 var Json = require("@glennsl/bs-json/src/Json.bs.js");
 var List = require("bs-platform/lib/js/list.js");
 var $$Array = require("bs-platform/lib/js/array.js");
+var Block = require("bs-platform/lib/js/block.js");
 var Caml_array = require("bs-platform/lib/js/caml_array.js");
 var Json_decode = require("@glennsl/bs-json/src/Json_decode.bs.js");
 
-var colorsDir = "design/variables/--colors";
-
-var clrs = List.map((function (json) {
-        return /* record */[
-                /* name */Caml_array.caml_array_get(Json_decode.field("overrideValues", (function (param) {
-                            return Json_decode.array((function (param) {
-                                          return Json_decode.field("value", Json_decode.string, param);
-                                        }), param);
-                          }), json), 0),
-                /* hex */Caml_array.caml_array_get(Json_decode.field("overrideValues", (function (param) {
-                            return Json_decode.array((function (param) {
-                                          return Json_decode.field("value", Json_decode.string, param);
-                                        }), param);
-                          }), json), 1)
-              ];
-      }), List.map(Json.parseOrRaise, List.map((function (file) {
-                return Fs.readFileSync(colorsDir + ("/" + file), "utf8");
-              }), List.filter((function (file) {
-                      return +(file !== "page.json");
-                    }))($$Array.to_list(Fs.readdirSync(colorsDir))))));
-
-function buildCssVarsAux(_acc, _param) {
+function buildColorCssVars(_acc, _param) {
   while(true) {
     var param = _param;
     var acc = _acc;
@@ -45,17 +25,97 @@ function buildCssVarsAux(_acc, _param) {
   };
 }
 
-function buildCssVars(vars) {
-  return buildCssVarsAux("", vars);
+function buildTypoCssVars(_acc, _param) {
+  while(true) {
+    var param = _param;
+    var acc = _acc;
+    if (param) {
+      var match = param[0];
+      _param = param[1];
+      _acc = acc + ("  --" + (match[/* name */0] + (": " + (match[/* value */1] + ";\n"))));
+      continue ;
+      
+    } else {
+      return acc;
+    }
+  };
 }
 
-var output = ":root {\n" + (buildCssVarsAux("", clrs) + "}");
+function buildCssVars(param) {
+  if (param.tag) {
+    return buildTypoCssVars("", param[0]);
+  } else {
+    return buildColorCssVars("", param[0]);
+  }
+}
 
-Fs.writeFileSync("output/css-next.css", output, "utf8");
+function buildColors(colorsDir) {
+  console.log("Building Color Variables!");
+  console.log("Reading data from " + colorsDir);
+  var clrs = List.map((function (json) {
+          return /* record */[
+                  /* name */Caml_array.caml_array_get(Json_decode.field("overrideValues", (function (param) {
+                              return Json_decode.array((function (param) {
+                                            return Json_decode.field("value", Json_decode.string, param);
+                                          }), param);
+                            }), json), 0),
+                  /* hex */Caml_array.caml_array_get(Json_decode.field("overrideValues", (function (param) {
+                              return Json_decode.array((function (param) {
+                                            return Json_decode.field("value", Json_decode.string, param);
+                                          }), param);
+                            }), json), 1)
+                ];
+        }), List.map(Json.parseOrRaise, List.map((function (file) {
+                  return Fs.readFileSync(colorsDir + ("/" + file), "utf8");
+                }), List.filter((function (file) {
+                        return +(file !== "page.json");
+                      }))($$Array.to_list(Fs.readdirSync(colorsDir))))));
+  return /* Colors */Block.__(0, [clrs]);
+}
 
-exports.colorsDir = colorsDir;
-exports.clrs = clrs;
-exports.buildCssVarsAux = buildCssVarsAux;
+console.log(+"thing".includes(".json"));
+
+function buildTypography(typographyDir) {
+  console.log("Building Typography Variables");
+  console.log("Reading data from " + typographyDir);
+  var dir = List.hd(List.filter((function (file) {
+                return +(file !== "page.json");
+              }))($$Array.to_list(Fs.readdirSync(typographyDir))));
+  var typos = List.map((function (json) {
+          return /* record */[
+                  /* name */Caml_array.caml_array_get(Json_decode.field("overrideValues", (function (param) {
+                              return Json_decode.array((function (param) {
+                                            return Json_decode.field("value", Json_decode.string, param);
+                                          }), param);
+                            }), json), 0),
+                  /* value */Caml_array.caml_array_get(Json_decode.field("overrideValues", (function (param) {
+                              return Json_decode.array((function (param) {
+                                            return Json_decode.field("value", Json_decode.string, param);
+                                          }), param);
+                            }), json), 1)
+                ];
+        }), List.map(Json.parseOrRaise, List.map((function (file) {
+                  return Fs.readFileSync(typographyDir + ("/" + (dir + ("/" + file))), "utf8");
+                }), List.filter((function (file) {
+                        return +(file !== "artboard.json");
+                      }))($$Array.to_list(Fs.readdirSync(typographyDir + ("/" + dir)))))));
+  return /* Typography */Block.__(1, [typos]);
+}
+
+var colorVars = buildColors("design/variables/--colors");
+
+var typoVars = buildTypography("design/swarm_design_tokens/typography");
+
+var output = ":root {\n" + (buildCssVars(colorVars) + (buildCssVars(typoVars) + "}"));
+
+Fs.writeFileSync("demo/src/style/variables.css", output, "utf8");
+
+exports.buildColorCssVars = buildColorCssVars;
+exports.buildTypoCssVars = buildTypoCssVars;
 exports.buildCssVars = buildCssVars;
+exports.buildColors = buildColors;
+exports.buildTypography = buildTypography;
+exports.colorVars = colorVars;
+exports.typoVars = typoVars;
 exports.output = output;
-/* clrs Not a pure module */
+/*  Not a pure module */

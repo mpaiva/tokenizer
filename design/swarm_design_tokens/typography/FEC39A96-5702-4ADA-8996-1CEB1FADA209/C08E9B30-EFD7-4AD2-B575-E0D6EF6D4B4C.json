@@ -13,10 +13,10 @@
   "frame": {
     "_class": "rect",
     "constrainProportions": false,
-    "height": 40,
-    "width": 887,
-    "x": 500,
-    "y": 342
+    "height": 90,
+    "width": 1202,
+    "x": 168,
+    "y": 254
   },
   "horizontalSpacing": 0,
   "isFlippedHorizontal": false,
@@ -24,14 +24,14 @@
   "isLocked": false,
   "isVisible": true,
   "layerListExpandedType": 0,
-  "name": "token",
-  "nameIsFixed": false,
+  "name": "font-mono",
+  "nameIsFixed": true,
   "overrideValues": [
     {
       "_class": "overrideValue",
       "do_objectID": "BDDDF264-1BD5-423F-8373-8E548597864D",
       "overrideName": "B51F23A3-CE07-4325-8F03-74A6B200AF06_stringValue",
-      "value": "$font--mono"
+      "value": "font--mono"
     },
     {
       "_class": "overrideValue",
@@ -42,7 +42,7 @@
   ],
   "overrides": {
     "2D9C7A5E-9CD3-410B-8469-0B5689E6D088": "Monaco, \"Andale Mono\", \"Courier New\", monospace",
-    "B51F23A3-CE07-4325-8F03-74A6B200AF06": "$font--mono"
+    "B51F23A3-CE07-4325-8F03-74A6B200AF06": "font--mono"
   },
   "resizingConstraint": 63,
   "resizingType": 0,
