@@ -1,0 +1,15 @@
+.leading-none {
+  line-height: var(--line-height-largeText);
+}
+
+.leading-tight {
+  line-height: var(--line-height);
+}
+
+.leading-normal {
+  line-height: var(--line-height-smallText);
+}
+
+.leading-loose {
+  line-height: var(--line-height-runningText);
+}

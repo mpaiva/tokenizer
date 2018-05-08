@@ -1,0 +1,27 @@
+.text-base {
+  font-size: var(--font-size);
+}
+
+.text-xs {
+  font-size: var(--font-size-tiny);
+}
+
+.text-sm {
+  font-size: var(--font-size-small);
+}
+
+.text-lg {
+  font-size: var(--font-size-big2);
+}
+
+.text-xl {
+  font-size: var(--var-size-big);
+}
+
+.text-2xl {
+  font-size: var(--font-size-title);
+}
+
+.text-3xl {
+  font-size: var(--font-size-display1);
+}

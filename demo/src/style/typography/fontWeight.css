@@ -1,0 +1,11 @@
+.font-bold {
+  font-weight: var(--W_bold);
+}
+
+.font-medium {
+  font-weight: var(--W_medium);
+}
+
+.font-normal {
+  font-weight: var(--W_normal);
+}
