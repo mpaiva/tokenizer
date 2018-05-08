@@ -1,5 +1,8 @@
 @import './variables.css';
-@import './colors/background.css';
+@import './background/color.css';
+@import './typography/color.css';
+@import './typography/fontFamily.css';
+@import './typography/fontSize.css';
 
 body {
   margin: 0;
