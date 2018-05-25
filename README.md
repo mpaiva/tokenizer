@@ -1,14 +1,23 @@
 # Sketch SSOT
 
+
+The intuit of this project is to bring designers into the codebase development workflow using Invision Studio, by aligning the design tasks with the development repository.
+
 ## Goals
 
-* Control/update css variables from sketch and automatically update the project's css files
+High level goals include:
 
-* Control/update typography variables from sketch and automatically update the project's css files
+- Using design files as single source of truth for design variables (tokens) and releasing developers from the responsibility of continuously asking for this information from the design team;
 
-* Control/update simple (dumb) components react components with styles
-  * Would allow the design team to contribute some code to the project
-  * Would allow the design team to create basic building block components for a UI-Kit
+- Control/update css variables from design files and automatically update the project's css files;
+
+- Control/update typography variables from sketch and automatically update the project's css files;
+
+- Control/update simple (dumb) components react components with styles;
+
+- Would allow the design team to contribute some code to the project;
+
+- Would allow the design team to create basic building block components for a UI-Kit;
 
 # Running
 
