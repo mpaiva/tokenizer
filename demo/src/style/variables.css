@@ -1,6 +1,6 @@
 :root {
   --default: #304FFE;
-  --secondary: #E0346D;
+  --secondary: #7ED321;
   --accent: #C1B926;
   --danger: #DC3645;
   --success: #10CC97;
@@ -12,7 +12,7 @@
   --font-size-title: 32px;
   --line-height-largeText: 1.1;
   --font-size-small: 14px;
-  --font: "Graphik Meetup", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  --font: Lobster, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
   --font-size-display1: 42px;
   --W_medium: 500;
   --W_normal: 400;

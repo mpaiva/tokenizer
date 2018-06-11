@@ -58,7 +58,11 @@
   },
   "colorSpace": 0,
   "do_objectID": "4AE3C59F-EFE3-4448-BAB8-1943DD094F48",
+  "foreignLayerStyles": [
+  ],
   "foreignSymbols": [
+  ],
+  "foreignTextStyles": [
   ],
   "layerSymbols": {
     "_class": "symbolContainer",
@@ -66,9 +70,9 @@
     ]
   },
   "meta": {
-    "appVersion": "49.3",
-    "build": 51167,
-    "version": 101
+    "appVersion": "50.2",
+    "build": 55047,
+    "version": 103
   },
   "pages": [
     "typography",

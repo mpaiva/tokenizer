@@ -42,10 +42,6 @@
       "value": "14px"
     }
   ],
-  "overrides": {
-    "2D9C7A5E-9CD3-410B-8469-0B5689E6D088": "14px",
-    "B51F23A3-CE07-4325-8F03-74A6B200AF06": "font-size-small"
-  },
   "resizingConstraint": 63,
   "resizingType": 0,
   "rotation": 0,

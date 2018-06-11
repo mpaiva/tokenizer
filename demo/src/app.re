@@ -1,6 +1,6 @@
-[%bs.raw {|require('./App.css')|}];
+[%bs.raw {|require('./app.css')|}];
 
-let component = ReasonReact.statelessComponent("App");
+let component = ReasonReact.statelessComponent("app");
 
 let make = _children => {
   ...component,
