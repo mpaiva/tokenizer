@@ -56,15 +56,6 @@
       "value": "61FD810B-531A-4E3B-9DDC-BEC9A5712516"
     }
   ],
-  "overrides": {
-    "0994DC7E-32ED-4724-98F5-FA81BE99D9E3": "355, 75, 86",
-    "47BED492-E28F-4259-AD3A-8098044FD5BE": "220, 54, 69",
-    "4D6622EE-C763-48A6-B88F-74A00FD5D488": {
-      "symbolID": "61FD810B-531A-4E3B-9DDC-BEC9A5712516"
-    },
-    "7E8ABCC9-4575-4CAA-83F6-E2EB021711EB": "danger",
-    "81E57553-D75A-4B9E-B041-46E6D01F3901": "DC3645"
-  },
   "resizingConstraint": 63,
   "resizingType": 0,
   "rotation": 0,
