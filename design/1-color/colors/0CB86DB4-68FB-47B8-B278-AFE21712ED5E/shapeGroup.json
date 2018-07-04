@@ -16,8 +16,8 @@
     "constrainProportions": false,
     "height": 26,
     "width": 26,
-    "x": -333,
-    "y": -225
+    "x": -300,
+    "y": -265
   },
   "hasClickThrough": false,
   "hasClippingMask": false,
@@ -32,7 +32,7 @@
       "id": "0DE129B7-7A3D-4D82-A1DA-A6577488F594"
     }
   ],
-  "name": "$blue",
+  "name": "shape-orange",
   "nameIsFixed": true,
   "resizingConstraint": 63,
   "resizingType": 0,
@@ -56,6 +56,7 @@
         "thickness": 1
       }
     ],
+    "do_objectID": "6D2A71F5-8766-4AE4-BAD9-B8D8DFBAAD8E",
     "endDecorationType": 0,
     "fills": [
       {
@@ -63,9 +64,9 @@
         "color": {
           "_class": "color",
           "alpha": 1,
-          "blue": 0.886238694190979,
-          "green": 0.5645518898963928,
-          "red": 0.288655698299408
+          "blue": 0,
+          "green": 0.4,
+          "red": 1
         },
         "fillType": 0,
         "isEnabled": true,

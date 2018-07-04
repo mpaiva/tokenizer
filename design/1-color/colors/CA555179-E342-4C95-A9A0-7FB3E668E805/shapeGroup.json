@@ -32,7 +32,7 @@
       "id": "3262C3ED-EC84-4BC9-A082-4BA642C27585"
     }
   ],
-  "name": "$papayaWhip",
+  "name": "shape-blue",
   "nameIsFixed": true,
   "resizingConstraint": 63,
   "resizingType": 0,
@@ -56,6 +56,7 @@
         "thickness": 1
       }
     ],
+    "do_objectID": "86138E38-A068-4CDA-A2D0-A41EDA5C13FC",
     "endDecorationType": 0,
     "fills": [
       {
@@ -63,9 +64,9 @@
         "color": {
           "_class": "color",
           "alpha": 1,
-          "blue": 0,
-          "green": 0.4980392156862745,
-          "red": 1
+          "blue": 0.886238694190979,
+          "green": 0.5645518898963928,
+          "red": 0.288655698299408
         },
         "fillType": 0,
         "isEnabled": true,
@@ -76,7 +77,7 @@
       }
     ],
     "miterLimit": 10,
-    "sharedObjectID": "F81894E8-9661-4EC7-B588-E2C8051BD810",
+    "sharedObjectID": "21EE28A7-D462-4873-A0A1-560732AF7DA0",
     "startDecorationType": 0
   },
   "userInfo": {

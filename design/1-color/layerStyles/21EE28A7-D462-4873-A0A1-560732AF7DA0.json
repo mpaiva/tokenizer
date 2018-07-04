@@ -1,7 +1,7 @@
 {
   "_class": "sharedStyle",
-  "do_objectID": "F81894E8-9661-4EC7-B588-E2C8051BD810",
-  "name": "--orange",
+  "do_objectID": "21EE28A7-D462-4873-A0A1-560732AF7DA0",
+  "name": "--blue",
   "value": {
     "_class": "style",
     "borders": [
@@ -27,9 +27,9 @@
         "color": {
           "_class": "color",
           "alpha": 1,
-          "blue": 0,
-          "green": 0.4,
-          "red": 1
+          "blue": 0.886238694190979,
+          "green": 0.5645518898963928,
+          "red": 0.288655698299408
         },
         "fillType": 0,
         "isEnabled": true,
@@ -40,7 +40,7 @@
       }
     ],
     "miterLimit": 10,
-    "sharedObjectID": "F81894E8-9661-4EC7-B588-E2C8051BD810",
+    "sharedObjectID": "21EE28A7-D462-4873-A0A1-560732AF7DA0",
     "startDecorationType": 0
   }
 }
