@@ -1,11 +1,9 @@
+# Mac Files
+.Spotlight-V100
+.AppleDouble
+.LSOverride
 .DS_Store
-.merlin
-.bsb.lock
-npm-debug.log
-/lib/bs/
-/node_modules/
-*.bs.js
-
-
-# Ignore sketch files
-# *.sketch
+.Trashes
+Icon?
+!Icons
+._*
