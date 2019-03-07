@@ -86,25 +86,37 @@ var exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/export-sass.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/script.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/export-sass.js":
-/*!****************************!*\
-  !*** ./src/export-sass.js ***!
-  \****************************/
-/*! exports provided: default */
+/***/ "./src/script.js":
+/*!***********************!*\
+  !*** ./src/script.js ***!
+  \***********************/
+/*! exports provided: promptSaveLocation, exportSass */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "promptSaveLocation", function() { return promptSaveLocation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "exportSass", function() { return exportSass; });
 /* harmony import */ var sketch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sketch */ "sketch");
 /* harmony import */ var sketch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sketch__WEBPACK_IMPORTED_MODULE_0__);
- // documentation: https://developer.sketchapp.com/reference/api/
 
-/* harmony default export */ __webpack_exports__["default"] = (function () {
+var promptSaveLocation = function promptSaveLocation(extension) {
+  var saveDialog = NSSavePanel.savePanel();
+  saveDialog.setNameFieldStringValue("variables");
+  saveDialog.setAllowedFileTypes([extension]);
+  saveDialog.setAllowsOtherFileTypes(false);
+  saveDialog.setExtensionHidden(false); // If the users selects 'OK', return the location they specified
+
+  if (saveDialog.runModal() == NSOKButton) return saveDialog.URL(); // Otherwise return nothing
+
+  return nil;
+};
+var exportSass = function exportSass() {
   var document = sketch__WEBPACK_IMPORTED_MODULE_0___default.a.getSelectedDocument();
   var selectedLayers = document.selectedLayers;
   var selectedCount = selectedLayers.length;
@@ -112,15 +124,23 @@ __webpack_require__.r(__webpack_exports__);
   if (selectedCount === 0) {
     sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.message('No layers are selected. 😕');
   } else {
-    selectedLayers.forEach(function (layer) {
-      if (layer.type === 'Text') {
-        sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.message('$' + layer.name + ': ' + layer.style.fontSize + 'px');
-      } else {
-        sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.message('$' + layer.name + ': ' + layer.style.fills[0].color.slice(0, 7));
-      }
-    });
+    var url = promptSaveLocation("scss");
+
+    if (url) {
+      var variables = selectedLayers.reduce(function (acc, layer) {
+        if (layer.type === 'Text') {
+          return acc + '$' + layer.name + ': ' + layer.style.fontSize + 'px;\n';
+        } else {
+          return acc + '$' + layer.name + ': ' + layer.style.fills[0].color.slice(0, 7) + ';\n';
+        }
+      }, '');
+      var path = url.path();
+      var content = NSString.stringWithString(variables);
+      content.writeToFile_atomically_encoding_error_(path, true, NSUTF8StringEncoding, null);
+      sketch__WEBPACK_IMPORTED_MODULE_0___default.a.UI.message('Sass variables successfully saved. 🎉');
+    }
   }
-});
+};
 
 /***/ }),
 
@@ -142,6 +162,7 @@ module.exports = require("sketch");
     exports[key](context);
   }
 }
+that['exportSass'] = __skpm_run.bind(this, 'exportSass');
 that['onRun'] = __skpm_run.bind(this, 'default')
 
-//# sourceMappingURL=export-sass.js.map
+//# sourceMappingURL=script.js.map

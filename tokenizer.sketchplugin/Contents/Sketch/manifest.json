@@ -5,14 +5,15 @@
   "commands": [
     {
       "name": "Export Sass",
-      "identifier": "tokenizer.export-sass-identifier",
-      "script": "export-sass.js"
+      "identifier": "export-sass",
+      "script": "script.js",
+      "handler": "exportSass"
     }
   ],
   "menu": {
-    "title": "tokenizer",
+    "title": "Tokenizer",
     "items": [
-      "tokenizer.export-sass-identifier"
+      "export-sass"
     ]
   },
   "version": "0.1.0",
