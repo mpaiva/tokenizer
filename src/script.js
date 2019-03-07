@@ -44,7 +44,7 @@ const run = (accumulator, extension, foldFunction, stringify = str => str) => {
   }
 }
 
-export const makeTextSassVars = (acc, layer) => `${acc}
+const makeTextSassVars = (acc, layer) => `${acc}
 $${layer.name}-font-size: ${layer.style.fontSize}px;
 $${layer.name}-font-family: ${layer.style.fontFamily};
 $${layer.name}-font-weight: ${layer.style.fontWeight}px;
