@@ -49,7 +49,7 @@ const foldLayerToSassVar = (acc, layer) => {
     return `${acc}$${layer.name}: ${layer.style.fontSize}px;\n`
   }
 
-  if (layer.type === 'Rectangle') {
+  if (layer.type === 'ShapePath') {
     return `${acc}$${layer.name}: ${layer.style.fills[0].color.slice(0, 7)};\n`
   }
 
