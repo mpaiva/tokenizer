@@ -2,7 +2,7 @@
 
 A sketch plugin to export Design Tokens as style variables.
 
-[Download](https://github.com/mpaiva/tokenizer/releases/download/v1.0.0/tokenizer.sketchplugin.zip)
+[Download](https://github.com/mpaiva/tokenizer/releases/download/v1.0.1/tokenizer.sketchplugin.zip)
 
 **Currently Supported**
 
