@@ -44,9 +44,16 @@ const run = (accumulator, extension, foldFunction, stringify = str => str) => {
   }
 }
 
+export const makeTextSassVars = (acc, layer) => `${acc}
+$${layer.name}-font-size: ${layer.style.fontSize}px;
+$${layer.name}-font-family: ${layer.style.fontFamily};
+$${layer.name}-font-weight: ${layer.style.fontWeight}px;
+$${layer.name}-color: ${layer.style.textColor};
+$${layer.name}-text-transform: ${layer.style.textTransform};`
+
 const foldLayerToSassVar = (acc, layer) => {
   if (layer.type === 'Text') {
-    return `${acc}$${layer.name}: ${layer.style.fontSize}px;\n`
+    return makeTextSassVars(acc, layer)
   }
 
   if (layer.type === 'ShapePath') {
@@ -60,7 +67,11 @@ const foldLayerToJsonKV = (acc, layer) => {
   if (layer.type === 'Text') {
     return {
       ...acc,
-      [layer.name]: `${layer.style.fontSize}px`,
+      [`${layer.name}-font-size`]: `${layer.style.fontSize}px`,
+      [`${layer.name}-font-family`]: `${layer.style.fontFamily}`,
+      [`${layer.name}-font-weight`]: `${layer.style.fontWeight}px`,
+      [`${layer.name}-color`]: `${layer.style.textColor}`,
+      [`${layer.name}-text-transform`]: `${layer.style.textTransform}`,
     }
   }
 
