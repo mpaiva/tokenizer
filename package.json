@@ -4,6 +4,10 @@
   "engines": {
     "sketch": ">=3.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpaiva/sketch-ssot.git"
+  },
   "skpm": {
     "name": "tokenizer",
     "manifest": "src/manifest.json",
