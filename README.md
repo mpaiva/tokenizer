@@ -1,6 +1,6 @@
 # Tokenizer
 
-A sketch plugin to export selected Design Tokens into style variables to be used in code bases.
+A sketch plugin to export Design Tokens as style variables.
 
 **Currently Supported**
 
