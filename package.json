@@ -7,7 +7,7 @@
   "description": "A sketch plugin to export Design Tokens as style variables",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mpaiva/sketch-ssot.git"
+    "url": "git+https://github.com/mpaiva/tokenizer.git"
   },
   "skpm": {
     "name": "tokenizer",
