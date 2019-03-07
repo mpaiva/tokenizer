@@ -1,6 +1,6 @@
 import sketch from 'sketch'
 
-export const promptSaveLocation = extension => {
+const promptSaveLocation = extension => {
   const saveDialog = NSSavePanel.savePanel()
 
   saveDialog.setNameFieldStringValue('variables')
