@@ -8,10 +8,16 @@
       "identifier": "export-sass",
       "script": "./script.js",
       "handler": "exportSass"
+    },
+    {
+      "name": "Export JSON",
+      "identifier": "export-json",
+      "script": "./script.js",
+      "handler": "exportJSON"
     }
   ],
   "menu": {
     "title": "Tokenizer",
-    "items": ["export-sass"]
+    "items": ["export-sass", "export-json"]
   }
 }

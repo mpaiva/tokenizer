@@ -8,19 +8,25 @@
       "identifier": "export-sass",
       "script": "script.js",
       "handler": "exportSass"
+    },
+    {
+      "name": "Export JSON",
+      "identifier": "export-json",
+      "script": "script.js",
+      "handler": "exportJSON"
     }
   ],
   "menu": {
     "title": "Tokenizer",
     "items": [
-      "export-sass"
+      "export-sass",
+      "export-json"
     ]
   },
   "version": "0.1.0",
   "name": "tokenizer",
-  "identifier": "tokenizer",
   "disableCocoaScriptPreprocessor": true,
   "appcast": "https://raw.githubusercontent.com//master/.appcast.xml",
   "author": "Lucas Rosa",
-  "authorEmail": "lmrosa007@gmail.com"
+  "authorEmail": "lucas@10factory.com"
 }
