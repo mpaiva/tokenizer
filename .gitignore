@@ -1,9 +1,13 @@
-# Mac Files
-.Spotlight-V100
-.AppleDouble
-.LSOverride
+# build artifacts
+tokenizer.sketchplugin
+
+# npm
+node_modules
+.npm
+npm-debug.log
+
+# mac
 .DS_Store
-.Trashes
-Icon?
-!Icons
-._*
+
+# WebStorm
+.idea

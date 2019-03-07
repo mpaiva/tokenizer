@@ -1,0 +1,16 @@
+{
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "Export Sass",
+      "identifier": "tokenizer.export-sass-identifier",
+      "script": "./export-sass.js"
+    }
+  ],
+  "menu": {
+    "title": "tokenizer",
+    "items": ["tokenizer.export-sass-identifier"]
+  }
+}

@@ -1,61 +1,93 @@
-# Sketch SSOT
+# tokenizer
 
+_This plugin was created using `skpm`. For a detailed explanation on how things work, checkout the [skpm Readme](https://github.com/skpm/skpm/blob/master/README.md)._
 
-The intuit of this project is to bring designers into the codebase development workflow using Invision Studio, by aligning the design tasks with the development repository.
+## Usage
 
-## Goals
+Install the dependencies
 
-High level goals include:
+```bash
+npm install
+```
 
-- Using design files as single source of truth for design variables (tokens) and releasing developers from the responsibility of continuously asking for this information from the design team;
+Once the installation is done, you can run some commands inside the project folder:
 
-- Control/update css variables from design files and automatically update the project's css files;
+```bash
+npm run build
+```
 
-- Control/update typography variables from sketch and automatically update the project's css files;
+To watch for changes:
 
-- Control/update simple (dumb) components react components with styles;
+```bash
+npm run watch
+```
 
-- Would allow the design team to contribute some code to the project;
+Additionally, if you wish to run the plugin every time it is built:
 
-- Would allow the design team to create basic building block components for a UI-Kit;
+```bash
+npm run start
+```
 
-# Running
+## Custom Configuration
 
-Currently the workflow is still very much in progress and requires [kactus](https://kactus.io/), [yarn](https://yarnpkg.com/en/), and [nodejs](https://nodejs.org/en/).
+### Babel
 
-## Basic Instructions
+To customize Babel, you have two options:
 
-In your terminal run
+* You may create a [`.babelrc`](https://babeljs.io/docs/usage/babelrc) file in your project's root directory. Any settings you define here will overwrite matching config-keys within skpm preset. For example, if you pass a "presets" object, it will replace & reset all Babel presets that skpm defaults to.
 
-* `git clone git@github.com:mpaiva/sketch-ssot.git`
-* `cd sketch-ssot`
-* `yarn install`
-* `yarn build`
-* `yarn exe` - Creates output files
+* If you'd like to modify or add to the existing Babel config, you must use a `webpack.skpm.config.js` file. Visit the [Webpack](#webpack) section for more info.
 
-That last command runs the [reasonml](https://reasonml.github.io/) code and generates a css variables file from the sketch data.
+### Webpack
 
-Now open the project with kactus and generate/open a sketch file from `variables` in the design folder. At this point you can change the color names and hex values of the color palletes. Save and commit through kactus, then return to the terminal and run `yarn exe` again. The css file in `output/css-next.css` will contain the updated names and values you have changed.
+To customize webpack create `webpack.skpm.config.js` file which exports function that will change webpack's config.
 
-# So far
+```js
+/**
+ * Function that mutates original webpack config.
+ * Supports asynchronous changes when promise is returned.
+ *
+ * @param {object} config - original webpack config.
+ * @param {boolean} isPluginCommand - whether the config is for a plugin command or a resource
+ **/
+module.exports = function(config, isPluginCommand) {
+  /** you can change config here **/
+}
+```
 
-At this point we only have color variables working. We would like to be able to export to multiple variable styles beyond CSS4 such as SASS to accommodate variations in technical decisions. Typography variables and autogenerating simple react components are next on the roadmap.
+## Debugging
 
-# Roadmap
+To view the output of your `console.log`, you have a few different options:
 
-  - Create a proof-of-concept leveraging an existing design system;
-  - Clone design system repository;
-  - Produce Sketch source file(s)
-  - Apply yarn scripts to create output files (SASS), then compile CSS files accordingly
-  - Test by reviewing changes on HTML after push.
+* Use the [`sketch-dev-tools`](https://github.com/skpm/sketch-dev-tools)
+* Open `Console.app` and look for the sketch logs
+* Look at the `~/Library/Logs/com.bohemiancoding.sketch3/Plugin Output.log` file
 
+Skpm provides a convenient way to do the latter:
 
-## Swarm Design System (by meetup.com)
+```bash
+skpm log
+```
 
-Recommend using the [Swarm Design System](https://meetup.github.io/swarm-design-system/design/color), which contains React, SASS, Storybook, i18n, a11y, and more.
+The `-f` option causes `skpm log` to not stop when the end of logs is reached, but rather to wait for additional data to be appended to the input
 
-### Design Documentation
-- https://meetup.github.io/swarm-design-system/design/color
+## Publishing your plugin
 
-### Github Repository
-- https://github.com/meetup/swarm-design-system
+```bash
+skpm publish <bump>
+```
+
+(where `bump` can be `patch`, `minor` or `major`)
+
+`skpm publish` will create a new release on your GitHub repository and create an appcast file in order for Sketch users to be notified of the update.
+
+You will need to specify a `repository` in the `package.json`:
+
+```diff
+...
++ "repository" : {
++   "type": "git",
++   "url": "git+https://github.com/ORG/NAME.git"
++  }
+...
+```
